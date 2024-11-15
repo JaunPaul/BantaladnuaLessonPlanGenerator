@@ -1,0 +1,123 @@
+You will receive a JSON input for a lesson, containing key information such as the lesson title, date, time, topic, vocabulary focus, grammar point, and writing and listening-speaking objectives. Using this input, create a detailed lesson plan output in JSON format according to the following schema. For each stage, generate content for the "Procedure," "Timing," and "Materials" fields based on the lesson details provided. Additionally, create an overall "lessonObjective" that aligns with the lesson’s topic, grammar, and vocabulary focus.
+
+### JSON Output Schema:
+```json
+{
+  "lessonPlan": {
+    "lesson": "string",
+    "date": "string",
+    "time": "string",
+    "topic": "string",
+    "vocabulary": "string",
+    "grammar": "string",
+    "listeningSpeaking": "string",
+    "writing": "string",
+    "lessonObjective": "string",
+    "stages": {
+      "stage": "string",
+      "procedure": "string",
+      "timing": "string",
+      "materials": "string"
+    }
+  }
+}
+```
+
+Instructions for Generating Output:
+1.Lesson Objective: Create a clear and concise "lessonObjective" that summarizes the main goal of the lesson, focusing on the key skills (grammar, vocabulary, and communication) the students will practice.
+  
+2. Stages: For each stage, use the content from the input to create:
+   - Procedure: Describe specific steps or activities students will engage in during this stage.
+   - Timing: Estimate the time for each stage, keeping the overall lesson duration in mind.
+   - Materials: List any materials needed, such as handouts, worksheets, visual aids, or digital resources.
+
+3. Output Example:
+   Below is an example of the output JSON structure:
+
+```json
+{
+  "lessonPlan": {
+    "lesson": "Week 1 Lesson 1",
+    "date": "11 November 2024",
+    "time": "13:00-13:50",
+    "topic": "Places",
+    "vocabulary": "Geographical features",
+    "grammar": "The superlative",
+    "listeningSpeaking": "Talk about extreme places",
+    "writing": "A quiz about places in the world",
+    "lessonObjective": "Students will learn and practice using superlatives to describe geographical features and extreme places around the world.",
+    "stages": [
+      {
+        "stage": "Warmup",
+        "procedure": "Introduce students to the topic by discussing common geographical features.",
+        "timing": "5 minutes",
+        "materials": "World map, images of geographical features"
+      },
+      {
+        "stage": "Introduction",
+        "procedure": "Explain superlative forms and provide examples.",
+        "timing": "10 minutes",
+        "materials": "Whiteboard, markers"
+      },
+      {
+        "stage": "Practice Activity",
+        "procedure": "Engage students in a group discussion about extreme places using superlatives.",
+        "timing": "15 minutes",
+        "materials": "List of extreme places, vocabulary handouts"
+      },
+      {
+        "stage": "Controlled Practice",
+        "procedure": "Provide a worksheet for students to practice superlative sentences.",
+        "timing": "10 minutes",
+        "materials": "Worksheets"
+      },
+      {
+        "stage": "Review",
+        "procedure": "Go over common mistakes and answer questions.",
+        "timing": "5 minutes",
+        "materials": "Whiteboard, markers"
+      },
+      {
+        "stage": "Closing",
+        "procedure": "Summarize key points from the lesson and preview homework.",
+        "timing": "3 minutes",
+        "materials": "None"
+      },
+      {
+        "stage": "Homework",
+        "procedure": "Assign a quiz on world places using superlatives.",
+        "timing": "1 minute",
+        "materials": "Quiz sheet"
+      }
+    ]
+  }
+}
+```
+
+Create the output JSON according to this schema, fully populating each field based on the lesson input provided. Generate unique content for each stage’s "Procedure," "Timing," and "Materials," and write a suitable "lessonObjective" that aligns with the lesson’s main focus. The total timing of the combined stages cannot exceed the "lessonDuration".
+
+Here is the lesson plan to convert
+
+```
+json
+{
+  "lesson": "Week 1 Lesson 1",
+  "date": "5 November 2024",
+  "time": "13:00-13:50",
+  "lessonDuration": "40min",
+  "topic": "Places",
+  "vocabulary": "Geographical features",
+  "grammar": "The superlative",
+  "listening-speaking": "Talk about extreme places",
+  "writing": "A quiz about places in the world",
+  "stages": [
+    "Warmup",
+    "Introduction",
+    "Practice Activity",
+    "Controlled Practice",
+    "Review",
+    "Closing",
+    "Homework"
+  ]
+}
+```

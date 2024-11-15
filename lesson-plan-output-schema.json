@@ -1,0 +1,21 @@
+{
+  "lessonPlan": {
+    "lesson": "string",
+    "date": "string",
+    "time": "string",
+    "topic": "string",
+    "vocabulary": "string",
+    "grammar": "string",
+    "listeningSpeaking": "string",
+    "writing": "string",
+    "lessonObjective": "string",
+    "stages": [
+      {
+        "stage": "string",
+        "procedure": "string",
+        "timing": "string",
+        "materials": "string"
+      }
+    ]
+  }
+}
