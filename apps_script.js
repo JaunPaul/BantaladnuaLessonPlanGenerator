@@ -7,7 +7,7 @@ function createCustomTableWithIntro() {
   const teacherName = "YOUR NAME HERE";
   const className = "M4/2";
 
-  const doc = DocumentApp.create("Custom Table Example with Intro");
+  const doc = DocumentApp.create("Lesson Plans");
   const body = doc.getBody();
 
   lessonPlanJsonData.forEach((data) => {
